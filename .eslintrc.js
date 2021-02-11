@@ -10,6 +10,7 @@ module.exports = {
                 "sourceType": "module"
         },
         "rules": {
+                semi: [ "error", "always" ],
                 quotes: [ "error", "double" ],
                 "object-curly-spacing": [ "error", "always" ],
                 "array-bracket-spacing": [ "error", "always" ],

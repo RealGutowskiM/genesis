@@ -1,4 +1,4 @@
-.PHONY: test tdd lint build clean all dev start
+.PHONY: test tdd lint format build clean all dev start
 
 all: build
 
@@ -19,6 +19,9 @@ test: lint
 
 lint: node_modules
 	npm run lint
+
+format: node_modules
+	npm run fix
 
 node_modules: package.json
 	npm install
