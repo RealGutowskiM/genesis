@@ -1,18 +1,15 @@
-.PHONY: test tdd lint format build clean all dev start
+.PHONY: test tdd lint format clean all dev start
 
-all: build
+all: test
 
-start: build
-	node dist/app.js
+start: node_modules
+	node bin/prod.js
 
 dev: node_modules
-	node src/main.mjs
+	node bin/dev.mjs
 
 tdd: node_modules
 	npm run tdd
-
-build: node_modules
-	npm run build
 
 test: lint
 	npm test
